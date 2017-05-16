@@ -46,12 +46,12 @@ System.register(["@angular/core", "@angular/router", "../../services/app.service
                 PlaceDetailComponent = __decorate([
                     core_1.Component({
                         selector: "place-detail",
-                        template: "\n        <div *ngIf=\"item\" class=\"item-details\">\n            <h2>{{item.Name}} - Detail View</h2>\n            <ul>\n                <li>\n                    <label>Subject:</label>\n                    <input [(ngModel)]=\"item.Name\" placeholder=\"Insert the name...\" />\n                </li>\n                <li>\n                    <label>Message:</label>\n                    <textarea [(ngModel)]=\"item.Location\" placeholder=\"Insert a location...\"></textarea>\n                </li>\n            </ul>\n        </div>\n\n        <div>\n            <button (click)='onBack()'>Back to Home</button>\n        </div>\n    "
+                        template: "\n        <div *ngIf=\"item\" class=\"item-details\">\n            <h2>{{item.Name}} - Detail View</h2>\n            <ul>\n                <li>\n                    <label>Subject:</label>\n                    <input [(ngModel)]=\"item.Name\" placeholder=\"Insert the name...\" />\n                </li>\n                <li>\n                    <label>Message:</label>\n                    <textarea [(ngModel)]=\"item.Location\" placeholder=\"Insert a location...\"></textarea>\n                </li>\n            </ul>\n        </div>\n\n        <div>\n            <button (click)='onBack()'>Back to Home</button>\n        </div>\n    ",
+                        styles: ["\n        .item-details {\n            margin: 5px;\n            padding: 5px 10px;\n            border: 1px solid 9BCCE0;\n            background-color: #DDF0D5;\n            width: 500px;\n        }\n        .item-details * {\n            vertical-align: middle;\n        }\n        .item-details ul li {\n            pading: 5px 0;\n        }\n    "]
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof app_service_1.AppService !== 'undefined' && app_service_1.AppService) === 'function' && _a) || Object, router_1.Router, router_1.ActivatedRoute])
+                    __metadata('design:paramtypes', [app_service_1.AppService, router_1.Router, router_1.ActivatedRoute])
                 ], PlaceDetailComponent);
                 return PlaceDetailComponent;
-                var _a;
             }());
             exports_1("PlaceDetailComponent", PlaceDetailComponent);
         }

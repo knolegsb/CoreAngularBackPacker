@@ -2,8 +2,8 @@
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./components/home/home.component";
-import { LoungeDetailComponent } from "./components/lounge/lounge-detial.component";
-import { placeDetailComponent } from "./components/explore/place-detail.component";
+import { LoungeDetailComponent } from "./components/lounge/lounge-detail.component";
+import { PlaceDetailComponent } from "./components/explore/place-detail.component";
 
 const routes: Routes = [
     {
@@ -17,7 +17,7 @@ const routes: Routes = [
     },
     {
         path: 'lounge/:id',
-        component: LoungerDetailComponent
+        component: LoungeDetailComponent
     },
     {
         path: 'explore/:id',

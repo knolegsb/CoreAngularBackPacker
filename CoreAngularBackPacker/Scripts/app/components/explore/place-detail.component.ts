@@ -23,7 +23,22 @@ import { Place } from "../../viewmodels/place";
         <div>
             <button (click)='onBack()'>Back to Home</button>
         </div>
-    `
+    `,
+    styles: [`
+        .item-details {
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid 9BCCE0;
+            background-color: #DDF0D5;
+            width: 500px;
+        }
+        .item-details * {
+            vertical-align: middle;
+        }
+        .item-details ul li {
+            pading: 5px 0;
+        }
+    `]
 })
 
 export class PlaceDetailComponent implements OnInit {

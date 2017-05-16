@@ -47,12 +47,12 @@ System.register(["@angular/core", "@angular/router", "../../services/app.service
                 LoungeDetailComponent = __decorate([
                     core_1.Component({
                         selector: "lounger-detail",
-                        template: "\n        <div *ngIf=\"item\" class=\"item-details\">\n            <h2>{{item.Subject}} - Detail View</h2>\n            <ul>\n                <li>\n                    <label>Subject:</label>\n                    <input [(ngModel)]=\"item.Subject\" placeholder=\"Insert the title...\"/>\n                </li>\n                <li>\n                    <label>Message: </label>\n                    <textarea [(ngModel)]=\"item.Message\" placeholder=\"Insert a message...\"></textarea>\n                </li>\n            </ul>\n        </div>\n        \n        <div>\n            <button (click)='onBack()'>Back to Home</button>\n        </div>\n    "
+                        template: "\n        <div *ngIf=\"item\" class=\"item-details\">\n            <h2>{{item.Subject}} - Detail View</h2>\n            <ul>\n                <li>\n                    <label>Subject:</label>\n                    <input [(ngModel)]=\"item.Subject\" placeholder=\"Insert the title...\"/>\n                </li>\n                <li>\n                    <label>Message: </label>\n                    <textarea [(ngModel)]=\"item.Message\" placeholder=\"Insert a message...\"></textarea>\n                </li>\n            </ul>\n        </div>\n        \n        <div>\n            <button (click)='onBack()'>Back to Home</button>\n        </div>\n    ",
+                        styles: ["\n        .item-details{\n            margin: 5px;\n            padidng: 5px 10px;\n            border: 1px solid 9BCCE0;\n            background-color: #DDF0D5;\n            width: 500px;\n        }\n        .item-details * {\n            vertical-align: middle;\n        }\n        .item-details ul li {\n            padding: 5px 0;\n        }\n    "]
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof app_service_1.AppService !== 'undefined' && app_service_1.AppService) === 'function' && _a) || Object, router_1.Router, router_1.ActivatedRoute])
+                    __metadata('design:paramtypes', [app_service_1.AppService, router_1.Router, router_1.ActivatedRoute])
                 ], LoungeDetailComponent);
                 return LoungeDetailComponent;
-                var _a;
             }());
             exports_1("LoungeDetailComponent", LoungeDetailComponent);
         }

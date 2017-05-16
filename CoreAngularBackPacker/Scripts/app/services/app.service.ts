@@ -1,7 +1,7 @@
 ﻿import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { Lounge } from "../viewmodels/lounge";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class AppService {
@@ -12,9 +12,8 @@ export class AppService {
     private placeBaseUrl = 'api/place/';
 
     getLatestDiscussion(num?: number) {
-        var url = this.loungeBaseUrl + "GetLastestDiscussion/";
-        if (num != null)
-            url += num;
+        var url = this.loungeBaseUrl + "GetLatestDiscussion/";
+        if (num != null) url += num;
         return this.http.get(url)
             .map(response => response.json())
             .catch(this.handleError);
@@ -28,10 +27,9 @@ export class AppService {
             .catch(this.handleError);
     }
 
-    getLastestEntries(num?: number) {
-        var url = this.placeBaseUrl + "GetLastestEntries/";
-        if (num != null)
-            url += num;
+    getLatestEntries(num?: number) {
+        var url = this.placeBaseUrl + "GetLatestEntries/";
+        if (num != null) url += num;
         return this.http.get(url)
             .map(response => response.json())
             .catch(this.handleError);
@@ -39,16 +37,14 @@ export class AppService {
 
     getMostViewed(num?: number) {
         var url = this.placeBaseUrl + "GetMostViewed/";
-        if (num != null)
-            url += num;
+        if (num != null) url += num;
         return this.http.get(url)
             .map(response => response.json())
             .catch(this.handleError);
     }
 
     getPlace(id: number) {
-        if (id == null)
-            throw new Error("id is required.");
+        if (id == null) throw new Error("id is required.");
         var url = this.placeBaseUrl + id;
         return this.http.get(url)
             .map(response => <Lounge>response.json())
